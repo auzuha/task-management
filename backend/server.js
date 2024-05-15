@@ -2,11 +2,17 @@ const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose')
 
+
+const cors = require('cors')
+
 const subtasksRoute = require('./routes/subtasks')
 const tasksRoute = require('./routes/tasks')
 
 app = express()
 
+app.use(cors({
+    origin: 'http://localhost:3000'
+  }));
 app.use(express.json())
 
 app.use((req, res, next) => {
