@@ -149,3 +149,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   
 }
+
+
+.update-task {
+  font-size: 30px;
+  width: 500px;
+  margin: auto
+}
