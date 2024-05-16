@@ -39,7 +39,10 @@ const getSubtasksForTask = async (req, res) => {
 
 const updateSubtaskById = async (req, res) => {
     try{    
-        res.status(501).json({message: 'Not implemented'})
+        const subtaskId = req.params.subtaskId
+        const data = {...req.body}
+        const updatedSubtask = await Subtask.updateOne({_id: subtaskId}, data)
+        res.status(200).json({message: 'Done'})
 
     }
     catch(err){

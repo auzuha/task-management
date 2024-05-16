@@ -16,7 +16,7 @@ router.get('/:taskId', getTaskById)
 router.post('/', addTask)
 
 //update task by id
-router.patch(':/taskId', updateTaskById)
+router.patch('/:taskId', updateTaskById)
 
 //delete task by id
 router.delete('/:taskId', deleteTaskById)

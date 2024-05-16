@@ -23,7 +23,7 @@ const Subtask = () => {
                             <p>Priority: {subtask.priority}</p>
                             <p>Progress: {subtask.progressPercentage}</p>
                             
-                            
+                            <button className="updateTaskButton" onClick={() => window.location.href=`/updateSubtask/${subtask._id}`}>UPDATE SUBTASK</button>
                             <button className="deleteTaskButton" onClick={() => {deleteSubtask('http://localhost:4000/api/subtasks',subtask._id,subtask.taskId, setSubTasks)}}>DELETE SUBTASK</button>    
                         </div>
                     )

@@ -19,6 +19,7 @@ const Tasks = (props) => {
                             <p>Task Name : {task.name}</p>
                             <p>Task Priority : {task.priority}</p>
                             </Link>
+                            <button className="updateTaskButton" onClick={() => window.location.href=`/updateTask/${task._id}`}>UPDATE TASK</button>
                             <button className="deleteTaskButton" onClick={() => {deleteTask('http://localhost:4000/api/tasks',task._id, setTasks)}}>DELETE TASK</button>    
                         </div>
                         

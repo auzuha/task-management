@@ -29,7 +29,10 @@ const getTaskById = async (req, res) => {
 
 const updateTaskById = async (req, res) => {
     try{
-        res.status(501).json({message: 'Not Implemented'})
+        id = req.params.taskId
+        const update = {...req.body}
+        const updatedTask = await taskCollection.updateOne({_id: id}, update )
+        res.status(200).json(updatedTask)
 
     }
     catch(err){
@@ -66,5 +69,5 @@ const deleteTaskById = async (req, res) => {
     }
 }
 module.exports = {
-    getAllTasks, getTaskById, updateTaskById, addTask, deleteTaskById
+getAllTasks, getTaskById, updateTaskById, addTask, deleteTaskById
 }

@@ -65,6 +65,8 @@
   margin-bottom: 5px;
   font-style: none;
 
+  position: relative;
+
 }
 
 
@@ -122,16 +124,28 @@
 }
 
 .navbar{
-  
-  height: 100px;
+  margin-bottom: 25px;
+  height: fit-content;
   background-color: rgba(215, 147, 147, 0.8);
   font-size: 40px;
   border-bottom: 4px solid rgba(215, 147, 147, 1);
 }
 
-.navbar .link{
-  position: absolute;
+
+
+
+.updateTaskButton{
+  font-size: 20px;
+  background-color: white;
+  border: 2px solid orange;
+  border-radius: 15px;
+  margin-left: 700px;
   
-  top: 50px;
-  left: 0px
+  
+}
+
+.updateTaskButton:hover{
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  
 }

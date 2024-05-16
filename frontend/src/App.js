@@ -6,6 +6,8 @@ import CreateDemo from './CreateDemo.js';
 import CreateSubtask from './CreateSubtask.js';
 import CreateTask from './CreateTask.js';
 import Navbar from './Navbar.js';
+import UpdateTask from './UpdateTask.js';
+import UpdateSubtask from './UpdateSubtask.js';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
@@ -28,6 +30,12 @@ function App() {
       </Route>
       <Route exact path="/createTask">
         <CreateTask />
+      </Route>
+      <Route exact path="/updateTask/:taskId">
+        <UpdateTask />
+      </Route>
+      <Route exact path="/updateSubtask/:subtaskId">
+        <UpdateSubtask />
       </Route>
       <Route exact path = "/:taskId">
       <Subtask />
