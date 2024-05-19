@@ -8,9 +8,10 @@ const Subtask = () => {
     const {taskId} = useParams()
     const {data: subtasks, setData: setSubTasks} = useFetch(`http://localhost:4000/api/subtasks/list/${taskId}`)
     return (  
+        subtasks &&
         <div className="tasks">
             <h2>
-                Viewing Subtasks for task {taskId}
+                Subtasks for<br />{subtasks[0].name}
             </h2>
             <button className="addTaskButton" onClick={() => {window.location.href='/createSubtask'}}>Add SubTask</button>
             {
